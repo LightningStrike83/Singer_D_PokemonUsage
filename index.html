@@ -25,22 +25,23 @@
             <p class="col-span-full">Filter Pokemon by their species' discovery region:</p>
             <div class="col-span-full">
                 <ul id="region">
-                    <li>Kanto</li>
-                    <li>Johto</li>
-                    <li>Hoenn</li>
-                    <li>Sinnoh</li>
-                    <li>Unova</li>
-                    <li>Kalos</li>
-                    <li>Alola</li>
-                    <li>Galar</li>
-                    <li>Hisui</li>
-                    <li>Paldea</li>
+                    <li id="all">All</li>
+                    <li id="kanto">Kanto</li>
+                    <li id="johto">Johto</li>
+                    <li id="hoenn">Hoenn</li>
+                    <li id="sinnoh">Sinnoh</li>
+                    <li id="unova">Unova</li>
+                    <li id="kalos">Kalos</li>
+                    <li id="alola">Alola</li>
+                    <li id="galar">Galar</li>
+                    <li id="hisui">Hisui</li>
+                    <li id="paldea">Paldea</li>
                 </ul>
             </div>
         </section>
 
         <section id="pokemon_list" class="grid-con">
-            <ul class="col-span-3">
+            <ul id="pokemon_families_list" class="col-span-3">
                 <li class="kanto" data-member="0">Bulbasaur family</li>
                 <li class="kanto" data-member="1">Charmander family</li>
                 <li class="kanto" data-member="2">Squirtle family</li>
@@ -581,6 +582,15 @@
             </ul>
         </section>
 
+        <section id="usage_data" class="grid-con">
+            <p id="members"></p>
+            <p id="main_trainer_uses"></p>
+            <p id="main_use"></p>
+            <p id="post_trainer_uses"></p>
+            <p id="post_use"></p>
+            <p id="total_use"></p>
+        </section>
+
         <section id="bottom" class="grid-con">
             <h2 class="hidden">Copyright Information</h2>
             <p class="col-span-full">All images used are used for a transformative work and nonprofit. The images are copyrighted or is a registered trademark. The contributor claims fair use. No copyright infringement is intended.</p>
@@ -590,5 +600,7 @@
             <p class="col-span-full">© 2023 Pokémon. © 1995–2023 Nintendo/Creatures Inc./GAME FREAK inc.</p>
         </section>
     </div>
+    <script src="js/pokemon_families.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

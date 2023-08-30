@@ -21,7 +21,6 @@ p, li {
 }
 
 li {
-    list-style-type: circle;
     margin-left: 15px;
     text-decoration: underline;
     cursor: pointer;
@@ -73,6 +72,10 @@ li {
 
 #region li {
     list-style-type: none;
+}
+
+#pokemon_families_list {
+    list-style: circle
 }
 
 #bottom {
