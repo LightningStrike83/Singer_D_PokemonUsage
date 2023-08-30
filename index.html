@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Often Are Pokemon Used?</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <section id="main_title" class="grid-con">
+            <h3 class="col-span-full">Pokemon Usages</h3>
+        </section>
+
+        <section id="instructions" class="grid-con">
+            <p id="instructions_text" class="col-span-full">Ever wonder how often a family of Pokemon are used in the main series games? Look no further! <br> Select a Pokemon family and the data will appear of who uses the Pokemon and when! Duplicates count!</p>
+        </section>
+
+        <section id="filter" class="grid-con">
+            <p class="col-span-full">Filter Pokemon by their species' discovery region:</p>
+            <div class="col-span-full">
+                <ul id="region">
+                    <li>Kanto</li>
+                    <li>Johto</li>
+                    <li>Hoenn</li>
+                    <li>Sinnoh</li>
+                    <li>Unova</li>
+                    <li>Kalos</li>
+                    <li>Alola</li>
+                    <li>Galar</li>
+                    <li>Hisui</li>
+                    <li>Paldea</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="pokemon_list" class="grid-con">
+            <ul class="col-span-3">
+                <li class="kanto" data-member="0">Bulbasaur family</li>
+                <li class="kanto" data-member="1">Charmander family</li>
+                <li class="kanto" data-member="2">Squirtle family</li>
+                <li class="kanto" data-member="3">Caterpie family</li>
+                <li class="kanto" data-member="4">Weedle family</li>
+                <li class="kanto" data-member="5">Pidgey family</li>
+                <li class="kanto" data-member="6">Rattata family</li>
+                <li class="kanto" data-member="7">Spearow family</li>
+                <li class="kanto" data-member="8">Ekans family</li>
+                <li class="kanto johto" data-member="9">Pichu family</li>
+                <li class="kanto alola" data-member="10">Sandshrew family</li>
+                <li class="kanto" data-member="11">Nidoran (M) family</li>
+                <li class="kanto" data-member="12">Nidoran (F) family</li>
+                <li class="kanto johto" data-member="13">Cleffa family</li>
+                <li class="kanto alola" data-member="14">Vulpix family</li>
+                <li class="kanto johto" data-member="15">Igglybuff family</li>
+                <li class="kanto johto" data-member="16">Zubat family</li>
+                <li class="kanto johto" data-member="17">Oddish family</li>
+                <li class="kanto" data-member="18">Paras family</li>
+                <li class="kanto" data-member="19">Venonat family</li>
+                <li class="kanto alola" data-member="20">Diglett family</li>
+                <li class="kanto alola galar" data-member="21">Meowth family</li>
+                <li class="kanto" data-member="22">Psyduck family</li>
+                <li class="kanto paldea" data-member="23">Mankey family</li>
+                <li class="kanto hisui" data-member="24">Growlithe family</li>
+                <li class="kanto johto" data-member="25">Poliwag family</li>
+                <li class="kanto" data-member="26">Abra family</li>
+                <li class="kanto" data-member="27">Machop family</li>
+                <li class="kanto" data-member="28">Bellsprout family</li>
+                <li class="kanto" data-member="29">Tentacool family</li>
+                <li class="kanto alola" data-member="30">Geodude family</li>
+                <li class="kanto galar" data-member="31">Ponyta family</li>
+                <li class="kanto johto galar" data-member="32">Slowpoke family</li>
+                <li class="kanto sinnoh" data-member="33">Magnemite family</li>
+                <li class="kanto galar" data-member="34">Farfetch'd family</li>
+                <li class="kanto" data-member="35">Doduo family</li>
+                <li class="kanto" data-member="36">Seel family</li>
+                <li class="kanto alola" data-member="37">Grimer family</li>
+                <li class="kanto" data-member="38">Shellder family</li>
+                <li class="kanto" data-member="39">Gastly family</li>
+                <li class="kanto johto" data-member="40">Onix family</li>
+                <li class="kanto" data-member="41">Drowzee family</li>
+                <li class="kanto" data-member="42">Krabby family</li>
+                <li class="kanto hisui" data-member="43">Voltorb family</li>
+                <li class="kanto alola" data-member="44">Exeggcute family</li>
+                <li class="kanto alola" data-member="45">Cubone family</li>
+                <li class="kanto johto" data-member="46">Tyrogue family</li>
+                <li class="kanto sinnoh" data-member="47">Lickitung family</li>
+                <li class="kanto galar" data-member="48">Koffing family</li>
+                <li class="kanto sinnoh" data-member="49">Rhyhorn family</li>
+                <li class="kanto johto sinnoh" data-member="50">Happiny family</li>
+                <li class="kanto sinnoh" data-member="51">Tangela family</li>
+                <li class="kanto" data-member="52">Kangaskhan</li>
+                <li class="kanto johto" data-member="53">Horsea family</li>
+                <li class="kanto" data-member="54">Goldeen family</li>
+                <li class="kanto" data-member="55">Staryu family</li>
+                <li class="kanto sinnoh galar" data-member="56">Mime Jr. family</li>
+                <li class="kanto johto hisui" data-member="57">Scyther family</li>
+                <li class="kanto johto" data-member="58">Smoochum family</li>
+                <li class="kanto johto sinnoh" data-member="59">Elekid family</li>
+                <li class="kanto johto sinnoh" data-member="60">Magby family</li>
+                <li class="kanto" data-member="61">Pinsir family</li>
+                <li class="kanto paldea" data-member="62">Tauros family</li>
+                <li class="kanto" data-member="63">Magikarp family</li>
+                <li class="kanto" data-member="64">Lapras</li>
+                <li class="kanto" data-member="65">Ditto</li>
+                <li class="kanto johto sinnoh kalos" data-member="66">Eeveelutions</li>
+                <li class="kanto johto sinnoh" data-member="67">Porygon family</li>
+                <li class="kanto" data-member="68">Omanyte family</li>
+                <li class="kanto" data-member="69">Kabuto family</li>
+                <li class="kanto" data-member="70">Aerodactyl</li>
+                <li class="kanto sinnoh" data-member="71">Snorlax</li>
+                <li class="kanto galar" data-member="72">Articuno</li>
+                <li class="kanto galar" data-member="73">Zapdos</li>
+                <li class="kanto galar" data-member="74">Moltres</li>
+                <li class="kanto" data-member="75">Dratini family</li>
+                <li class="kanto" data-member="76">Mewtwo</li>
+                <li class="kanto" data-member="77">Mew</li>
+                <li class="johto" data-member="78">Chikorita family</li>
+                <li class="johto hisui" data-member="79">Cyndaquil family</li>
+                <li class="johto" data-member="80">Totodile family</li>
+                <li class="johto" data-member="81">Sentret family</li>
+                <li class="johto" data-member="82">Hoothoot family</li>
+                <li class="johto" data-member="83">Ledyba family</li>
+                <li class="johto" data-member="84">Spinarak family</li>
+                <li class="johto" data-member="85">Chinchou family</li>
+                <li class="johto sinnoh" data-member="86">Togepi family</li>
+                <li class="johto" data-member="87">Natu family</li>
+                <li class="johto" data-member="88">Mareep family</li>
+                <li class="johto hoenn" data-member="89">Azurill family</li>
+                <li class="johto sinnoh" data-member="90">Bonsly family</li>
+                <li class="johto" data-member="91">Hoppip family</li>
+                <li class="johto sinnoh" data-member="92">Aipom family</li>
+                <li class="johto" data-member="93">Sunken family</li>
+                <li class="johto sinnoh" data-member="94">Yanma family</li>
+                <li class="johto paldea" data-member="95">Wooper family</li>
+                <li class="johto sinnoh" data-member="96">Murkrow family</li>
+                <li class="johto sinnoh" data-member="97">Misdreavus family</li>
+                <li class="johto" data-member="98">Unown</li>
+                <li class="johto hoenn" data-member="99">Wynaut family</li>
+                <li class="johto paldea" data-member="100">Girafarig family</li>
+                <li class="johto" data-member="101">Pineco family</li>
+                <li class="johto paldea" data-member="102">Dunsparce family</li>
+                <li class="johto sinnoh" data-member="103">Gligar family</li>
+                <li class="johto" data-member="104">Snubbull family</li>
+                <li class="johto hisui" data-member="105">Qwilfish family</li>
+                <li class="johto" data-member="106">Shuckle</li>
+                <li class="johto" data-member="107">Heracross</li>
+                <li class="johto sinnoh hisui" data-member="108">Sneasel family</li>
+                <li class="johto hisui" data-member="109">Teddiursa family</li>
+                <li class="johto" data-member="110">Slugma family</li>
+                <li class="johto sinnoh" data-member="111">Swinub family</li>
+                <li class="johto galar" data-member="112">Corsola family</li>
+                <li class="johto" data-member="113">Remoraid family</li>
+                <li class="johto" data-member="114">Delibird</li>
+                <li class="johto sinnoh" data-member="115">Mantyke family</li>
+                <li class="johto" data-member="116">Skarmory family</li>
+                <li class="johto" data-member="117">Houndour family</li>
+                <li class="johto" data-member="118">Phanpy family</li>
+                <li class="johto hisui" data-member="119">Stantler family</li>
+                <li class="johto" data-member="120">Smeargle family</li>
+                <li class="johto" data-member="121">Miltank</li>
+                <li class="johto" data-member="122">Raikou</li>
+                <li class="johto" data-member="123">Entei</li>
+                <li class="johto" data-member="124">Suicune</li>
+                <li class="johto" data-member="125">Larvitar family</li>
+                <li class="johto" data-member="126">Lugia</li>
+                <li class="johto" data-member="127">Ho-oh</li>
+                <li class="johto" data-member="128">Celebi</li>
+                <li class="hoenn" data-member="129">Treecko family</li>
+                <li class="hoenn" data-member="130">Torchic family</li>
+                <li class="hoenn" data-member="131">Mudkip family</li>
+                <li class="hoenn" data-member="132">Poochyena family</li>
+                <li class="hoenn galar" data-member="133">Zigzagoon family</li>
+                <li class="hoenn" data-member="134">Wurmple family</li>
+                <li class="hoenn" data-member="135">Lotad family</li>
+                <li class="hoenn" data-member="136">Seedot family</li>
+                <li class="hoenn" data-member="137">Taillow family</li>
+                <li class="hoenn" data-member="138">Wingull family</li>
+                <li class="hoenn sinnoh" data-member="139">Ralts family</li>
+                <li class="hoenn" data-member="140">Surskit family</li>
+                <li class="hoenn" data-member="141">Shroomish family</li>
+                <li class="hoenn" data-member="142">Slakoth family</li>
+                <li class="hoenn" data-member="143">Nincada family</li>
+                <li class="hoenn" data-member="144">Whismur family</li>
+                <li class="hoenn" data-member="145">Makuhita family</li>
+                <li class="hoenn sinnoh" data-member="146">Nosepass family</li>
+                <li class="hoenn" data-member="147">Skitty family</li>
+                <li class="hoenn" data-member="148">Sableye</li>
+                <li class="hoenn" data-member="149">Mawile</li>
+                <li class="hoenn" data-member="150">Aron family</li>
+                <li class="hoenn" data-member="151">Meditite family</li>
+                <li class="hoenn" data-member="152">Electrike family</li>
+                <li class="hoenn" data-member="153">Plusle</li>
+                <li class="hoenn" data-member="154">Minun</li>
+                <li class="hoenn" data-member="155">Volbeat</li>
+                <li class="hoenn" data-member="156">Illumise</li>
+                <li class="hoenn sinnoh" data-member="157">Budew family</li>
+                <li class="hoenn" data-member="158">Gulpin family</li>
+                <li class="hoenn" data-member="159">Carvanha family</li>
+                <li class="hoenn" data-member="160">Wailmer family</li>
+                <li class="hoenn" data-member="161">Numel family</li>
+                <li class="hoenn" data-member="162">Torkoal</li>
+                <li class="hoenn" data-member="163">Spoink family</li>
+                <li class="hoenn" data-member="164">Spinda</li>
+                <li class="hoenn" data-member="165">Trapinch family</li>
+                <li class="hoenn" data-member="166">Cacnea family</li>
+                <li class="hoenn" data-member="167">Swablu family</li>
+                <li class="hoenn" data-member="168">Zangoose</li>
+                <li class="hoenn" data-member="169">Seviper</li>
+                <li class="hoenn" data-member="170">Lunatone</li>
+                <li class="hoenn" data-member="171">Solrock</li>
+                <li class="hoenn" data-member="172">Barboach family</li>
+                <li class="hoenn" data-member="173">Corphish family</li>
+                <li class="hoenn" data-member="174">Baltoy family</li>
+                <li class="hoenn" data-member="175">Lileep family</li>
+                <li class="hoenn" data-member="176">Anorith family</li>
+                <li class="hoenn" data-member="177">Feebas family</li>
+                <li class="hoenn" data-member="178">Castform</li>
+                <li class="hoenn" data-member="179">Kecleon</li>
+                <li class="hoenn" data-member="180">Shuppet family</li>
+                <li class="hoenn sinnoh" data-member="181">Duskull family</li>
+                <li class="hoenn" data-member="182">Tropius</li>
+                <li class="hoenn sinnoh" data-member="183">Chingling family</li>
+                <li class="hoenn" data-member="184">Absol</li>
+                <li class="hoenn sinnoh" data-member="185">Snorunt family</li>
+                <li class="hoenn" data-member="186">Spheal family</li>
+                <li class="hoenn" data-member="187">Clamperl family</li>
+                <li class="hoenn" data-member="188">Relicanth</li>
+                <li class="hoenn" data-member="189">Luvdisc</li>
+                <li class="hoenn" data-member="190">Bagon family</li>
+                <li class="hoenn" data-member="191">Beldum family</li>
+                <li class="hoenn" data-member="192">Regirock</li>
+                <li class="hoenn" data-member="193">Regice</li>
+                <li class="hoenn" data-member="194">Registeel</li>
+                <li class="hoenn" data-member="195">Latias</li>
+                <li class="hoenn" data-member="196">Latios</li>
+                <li class="hoenn" data-member="197">Kyogre</li>
+                <li class="hoenn" data-member="198">Groudon</li>
+                <li class="hoenn" data-member="199">Rayquaza</li>
+                <li class="hoenn" data-member="200">Jirachi</li>
+                <li class="hoenn" data-member="201">Deoxys</li>
+                <li class="sinnoh" data-member="202">Turtwig family</li>
+                <li class="sinnoh" data-member="203">Chimchar family</li>
+                <li class="sinnoh" data-member="204">Piplup family</li>
+                <li class="sinnoh" data-member="205">Starly family</li>
+                <li class="sinnoh" data-member="206">Bidoof family</li>
+                <li class="sinnoh" data-member="207">Kricketot family</li>
+                <li class="sinnoh" data-member="208">Shinx family</li>
+                <li class="sinnoh" data-member="209">Cranidos family</li>
+                <li class="sinnoh" data-member="210">Shieldon family</li>
+                <li class="sinnoh" data-member="211">Burmy family</li>
+                <li class="sinnoh" data-member="212">Combee family</li>
+                <li class="sinnoh" data-member="213">Pachirisu</li>
+                <li class="sinnoh" data-member="214">Buizel family</li>
+                <li class="sinnoh" data-member="215">Cherubi family</li>
+                <li class="sinnoh" data-member="216">Shellos family</li>
+                <li class="sinnoh" data-member="217">Drifloon family</li>
+                <li class="sinnoh" data-member="218">Buneary family</li>
+                <li class="sinnoh" data-member="219">Glameow family</li>
+                <li class="sinnoh" data-member="220">Stunky family</li>
+                <li class="sinnoh" data-member="221">Bronzor family</li>
+                <li class="sinnoh" data-member="222">Chatot</li>
+                <li class="sinnoh" data-member="223">Spiritomb</li>
+                <li class="sinnoh" data-member="224">Gible family</li>
+                <li class="sinnoh" data-member="225">Riolu family</li>
+                <li class="sinnoh" data-member="226">Hippopotas family</li>
+                <li class="sinnoh" data-member="227">Skorupi family</li>
+                <li class="sinnoh" data-member="228">Croagunk family</li>
+                <li class="sinnoh" data-member="229">Carnivine</li>
+                <li class="sinnoh" data-member="230">Finneon family</li>
+                <li class="sinnoh" data-member="231">Snover family</li>
+                <li class="sinnoh" data-member="232">Rotom</li>
+                <li class="sinnoh" data-member="233">Uxie</li>
+                <li class="sinnoh" data-member="234">Mesprit</li>
+                <li class="sinnoh" data-member="235">Azelf</li>
+                <li class="sinnoh" data-member="236">Dialga</li>
+                <li class="sinnoh" data-member="237">Palkia</li>
+                <li class="sinnoh" data-member="238">Heatran</li>
+                <li class="sinnoh" data-member="239">Regigigas</li>
+                <li class="sinnoh" data-member="240">Giratina</li>
+                <li class="sinnoh" data-member="241">Cresselia</li>
+                <li class="sinnoh" data-member="242">Manaphy family</li>
+                <li class="sinnoh" data-member="243">Darkrai</li>
+                <li class="sinnoh" data-member="244">Shaymin</li>
+                <li class="sinnoh" data-member="245">Arceus</li>
+                <li class="sinnoh" data-member="246">Victini</li>
+                <li class="unova" data-member="247">Snivy family</li>
+                <li class="unova" data-member="248">Tepig family</li>
+                <li class="unova hisui" data-member="249">Oshawott family</li>
+                <li class="unova" data-member="250">Patrat family</li>
+                <li class="unova" data-member="251">Lillipup family</li>
+                <li class="unova" data-member="252">Purrloin family</li>
+                <li class="unova" data-member="253">Pansage family</li>
+                <li class="unova" data-member="254">Pansear family</li>
+                <li class="unova" data-member="255">Panpour family</li>
+                <li class="unova" data-member="256">Munna family</li>
+                <li class="unova" data-member="257">Pidove family</li>
+                <li class="unova" data-member="258">Blitzle family</li>
+                <li class="unova" data-member="259">Roggenrola family</li>
+                <li class="unova" data-member="260">Woobat family</li>
+                <li class="unova" data-member="261">Drilbur family</li>
+                <li class="unova" data-member="262">Audino</li>
+                <li class="unova" data-member="263">Timburr family</li>
+                <li class="unova" data-member="264">Tympole family</li>
+                <li class="unova" data-member="265">Throh</li>
+                <li class="unova" data-member="266">Sawk</li>
+                <li class="unova" data-member="267">Sewaddle family</li>
+                <li class="unova" data-member="268">Venipede family</li>
+                <li class="unova" data-member="269">Cottonee family</li>
+                <li class="unova hisui" data-member="270">Petilil family</li>
+                <li class="unova hisui" data-member="271">Basculin family</li>
+                <li class="unova" data-member="272">Sandile family</li>
+                <li class="unova galar" data-member="273">Darumaka family</li>
+                <li class="unova" data-member="274">Maractus</li>
+                <li class="unova" data-member="275">Dwebble family</li>
+                <li class="unova" data-member="276">Scraggy family</li>
+                <li class="unova" data-member="277">Sigilyph</li>
+                <li class="unova galar" data-member="278">Yamask family</li>
+                <li class="unova" data-member="279">Tirtouga family</li>
+                <li class="unova" data-member="280">Archen family</li>
+                <li class="unova" data-member="281">Trubbish family</li>
+                <li class="unova hisui" data-member="282">Zorua family</li>
+                <li class="unova" data-member="283">Minccino family</li>
+                <li class="unova" data-member="284">Gothita family</li>
+                <li class="unova" data-member="285">Solosis family</li>
+                <li class="unova" data-member="286">Ducklett family</li>
+                <li class="unova" data-member="287">Vanillite family</li>
+                <li class="unova" data-member="288">Deerling family</li>
+                <li class="unova" data-member="289">Emolga</li>
+                <li class="unova" data-member="290">Karrablast family</li>
+                <li class="unova" data-member="291">Foongus family</li>
+                <li class="unova" data-member="292">Frillish family</li>
+                <li class="unova" data-member="293">Alomomola</li>
+                <li class="unova" data-member="294">Joltik family</li>
+                <li class="unova" data-member="295">Ferroseed family</li>
+                <li class="unova" data-member="296">Klink family</li>
+                <li class="unova" data-member="297">Tynamo family</li>
+                <li class="unova" data-member="298">Elgyem family</li>
+                <li class="unova" data-member="299">Litwick family</li>
+                <li class="unova" data-member="300">Axew family</li>
+                <li class="unova" data-member="301">Cubchoo family</li>
+                <li class="unova" data-member="302">Cryogonal</li>
+                <li class="unova" data-member="303">Shelmet family</li>
+                <li class="unova galar" data-member="304">Stunfisk</li>
+                <li class="unova" data-member="305">Mienfoo family</li>
+                <li class="unova" data-member="306">Druddigon</li>
+                <li class="unova" data-member="307">Golett family</li>
+                <li class="unova paldea" data-member="308">Pawniard family</li>
+                <li class="unova" data-member="309">Bouffalant</li>
+                <li class="unova hisui" data-member="310">Rufflet family</li>
+                <li class="unova" data-member="311">Vullaby family</li>
+                <li class="unova" data-member="312">Heatmor</li>
+                <li class="unova" data-member="313">Durant</li>
+                <li class="unova" data-member="314">Deino family</li>
+                <li class="unova" data-member="315">Larvesta family</li>
+                <li class="unova" data-member="316">Cobalion</li>
+                <li class="unova" data-member="317">Terrakion</li>
+                <li class="unova" data-member="318">Virizion</li>
+                <li class="unova" data-member="319">Tornadus</li>
+                <li class="unova" data-member="320">Thundurus</li>
+                <li class="unova" data-member="321">Reshiram</li>
+                <li class="unova" data-member="322">Zekrom</li>
+                <li class="unova" data-member="323">Landorus</li>
+                <li class="unova" data-member="324">Kyurem</li>
+                <li class="unova" data-member="325">Keldeo</li>
+                <li class="unova" data-member="326">Meloetta</li>
+                <li class="unova" data-member="327">Genesect</li>
+                <li class="kalos" data-member="328">Chespin family</li>
+                <li class="kalos" data-member="329">Fennekin family</li>
+                <li class="kalos" data-member="330">Froakie family</li>
+                <li class="kalos" data-member="331">Bunnelby family</li>
+                <li class="kalos" data-member="332">Fletchling family</li>
+                <li class="kalos" data-member="333">Scatterbug family</li>
+                <li class="kalos" data-member="334">Litleo family</li>
+                <li class="kalos" data-member="335">Flabebe family</li>
+                <li class="kalos" data-member="336">Skiddo family</li>
+                <li class="kalos" data-member="337">Pancham family</li>
+                <li class="kalos" data-member="338">Furfrou family</li>
+                <li class="kalos" data-member="339">Espurr family</li>
+                <li class="kalos" data-member="340">Honedge family</li>
+                <li class="kalos" data-member="341">Spritzee family</li>
+                <li class="kalos" data-member="342">Swirlix family</li>
+                <li class="kalos" data-member="343">Inkay family</li>
+                <li class="kalos" data-member="344">Binacle family</li>
+                <li class="kalos" data-member="345">Skrelp family</li>
+                <li class="kalos" data-member="346">Clauncher family</li>
+                <li class="kalos" data-member="347">Helioptile family</li>
+                <li class="kalos" data-member="348">Tyrunt family</li>
+                <li class="kalos" data-member="349">Amaura family</li>
+                <li class="kalos" data-member="350">Hawlucha</li>
+                <li class="kalos" data-member="351">Dedenne</li>
+                <li class="kalos" data-member="352">Carbink</li>
+                <li class="kalos hisui" data-member="353">Goomy family</li>
+                <li class="kalos" data-member="354">Klefki</li>
+                <li class="kalos" data-member="355">Phantump family</li>
+                <li class="kalos" data-member="356">Pumpkaboo family</li>
+                <li class="kalos hisui" data-member="357">Bergmite family</li>
+                <li class="kalos" data-member="358">Noibat family</li>
+                <li class="kalos" data-member="359">Xerneas</li>
+                <li class="kalos" data-member="360">Yveltal</li>
+                <li class="kalos" data-member="361">Zygarde</li>
+                <li class="kalos" data-member="362">Diancie</li>
+                <li class="kalos" data-member="363">Hoopa</li>
+                <li class="kalos" data-member="364">Volcanion</li>
+                <li class="alola hisui" data-member="365">Rowlet family</li>
+                <li class="alola" data-member="366">Litten family</li>
+                <li class="alola" data-member="367">Popplio family</li>
+                <li class="alola" data-member="368">Pikipek family</li>
+                <li class="alola" data-member="369">Yungoos family</li>
+                <li class="alola" data-member="370">Grubbin family</li>
+                <li class="alola" data-member="371">Crabrawler family</li>
+                <li class="alola" data-member="372">Oricorio</li>
+                <li class="alola" data-member="373">Cutiefly family</li>
+                <li class="alola" data-member="374">Rockruff family</li>
+                <li class="alola" data-member="375">Wishiwashi</li>
+                <li class="alola" data-member="376">Mareanie family</li>
+                <li class="alola" data-member="377">Mudbray family</li>
+                <li class="alola" data-member="378">Dewpider family</li>
+                <li class="alola" data-member="379">Fomantis family</li>
+                <li class="alola" data-member="380">Morelull family</li>
+                <li class="alola" data-member="381">Salandit family</li>
+                <li class="alola" data-member="382">Stufful family</li>
+                <li class="alola" data-member="383">Bounsweet family</li>
+                <li class="alola" data-member="384">Comfey</li>
+                <li class="alola" data-member="385">Oranguru</li>
+                <li class="alola" data-member="386">Passimian</li>
+                <li class="alola" data-member="387">Wimpod family</li>
+                <li class="alola" data-member="388">Sandygast family</li>
+                <li class="alola" data-member="389">Pyukumuku</li>
+                <li class="alola" data-member="390">Silvally family</li>
+                <li class="alola" data-member="391">Minior family</li>
+                <li class="alola" data-member="392">Komala</li>
+                <li class="alola" data-member="393">Turtonator</li>
+                <li class="alola" data-member="394">Togedemaru</li>
+                <li class="alola" data-member="395">Mimikyu</li>
+                <li class="alola" data-member="396">Bruxish</li>
+                <li class="alola" data-member="397">Drampa</li>
+                <li class="alola" data-member="398">Dhelmise</li>
+                <li class="alola" data-member="399">Jangmo-o family</li>
+                <li class="alola" data-member="400">Tapu Koko</li>
+                <li class="alola" data-member="401">Tapu Lele</li>
+                <li class="alola" data-member="402">Tapu Bulu</li>
+                <li class="alola" data-member="403">Tapu Fini</li>
+                <li class="alola" data-member="404">Cosmog family</li>
+                <li class="alola" data-member="405">Nihilego</li>
+                <li class="alola" data-member="406">Buzzwole</li>
+                <li class="alola" data-member="407">Pheromosa</li>
+                <li class="alola" data-member="408">Xurkitree</li>
+                <li class="alola" data-member="409">Celesteela</li>
+                <li class="alola" data-member="410">Kartana</li>
+                <li class="alola" data-member="411">Guzzlord</li>
+                <li class="alola" data-member="412">Necrozma</li>
+                <li class="alola" data-member="413">Magearna</li>
+                <li class="alola" data-member="414">Marshadow</li>
+                <li class="alola" data-member="415">Poipole family</li>
+                <li class="alola" data-member="416">Stakataka</li>
+                <li class="alola" data-member="417">Blacephalon</li>
+                <li class="alola" data-member="418">Zeraora</li>
+                <li class="alola" data-member="419">Meltan family</li>
+                <li class="galar" data-member="420">Grookey family</li>
+                <li class="galar" data-member="421">Scorbunny family</li>
+                <li class="galar" data-member="422">Sobble family</li>
+                <li class="galar" data-member="423">Skwovet family</li>
+                <li class="galar" data-member="424">Rookidee family</li>
+                <li class="galar" data-member="425">Blipbug family</li>
+                <li class="galar" data-member="426">Nickit family</li>
+                <li class="galar" data-member="427">Gossifleur family</li>
+                <li class="galar" data-member="428">Wooloo family</li>
+                <li class="galar" data-member="429">Chewtle family</li>
+                <li class="galar" data-member="430">Yamper family</li>
+                <li class="galar" data-member="431">Rolycoly family</li>
+                <li class="galar paldea" data-member="432">Applin family</li>
+                <li class="galar" data-member="433">Silicobra family</li>
+                <li class="galar" data-member="434">Cramorant</li>
+                <li class="galar" data-member="435">Arrokuda family</li>
+                <li class="galar" data-member="436">Toxel family</li>
+                <li class="galar" data-member="437">Sizzlipede family</li>
+                <li class="galar" data-member="438">Clobbopus family</li>
+                <li class="galar" data-member="439">Sinistea family</li>
+                <li class="galar" data-member="440">Hatenna family</li>
+                <li class="galar" data-member="441">Impidimp family</li>
+                <li class="galar" data-member="442">Milcery family</li>
+                <li class="galar" data-member="443">Falinks</li>
+                <li class="galar" data-member="444">Pincurchin</li>
+                <li class="galar" data-member="445">Snom family</li>
+                <li class="galar" data-member="446">Stonjourner</li>
+                <li class="galar" data-member="447">Eiscue</li>
+                <li class="galar" data-member="448">Indeedee</li>
+                <li class="galar" data-member="449">Morpeko</li>
+                <li class="galar" data-member="450">Cufant family</li>
+                <li class="galar" data-member="451">Dracozolt</li>
+                <li class="galar" data-member="452">Arctozolt</li>
+                <li class="galar" data-member="453">Dracovish</li>
+                <li class="galar" data-member="454">Artcovish</li>
+                <li class="galar paldea" data-member="455">Duraludon family</li>
+                <li class="galar" data-member="456">Dreepy family</li>
+                <li class="galar" data-member="457">Zacian</li>
+                <li class="galar" data-member="458">Zamazenta</li>
+                <li class="galar" data-member="459">Eternatus</li>
+                <li class="galar" data-member="460">Kubfu family</li>
+                <li class="galar" data-member="461">Zarude</li>
+                <li class="galar" data-member="462">Regieleki</li>
+                <li class="galar" data-member="463">Regidrago</li>
+                <li class="galar" data-member="464">Glastrier</li>
+                <li class="galar" data-member="465">Spectrier</li>
+                <li class="galar" data-member="466">Calyrex</li>
+                <li class="hisui" data-member="467">Enamorus</li>
+                <li class="paldea" data-member="468">Sprigatito family</li>
+                <li class="paldea" data-member="469">Fuecoco family</li>
+                <li class="paldea" data-member="470">Quaxly family</li>
+                <li class="paldea" data-member="471">Lechonk family</li>
+                <li class="paldea" data-member="472">Tarountula family</li>
+                <li class="paldea" data-member="473">Nymble family</li>
+                <li class="paldea" data-member="474">Pawmi family</li>
+                <li class="paldea" data-member="475">Tandemaus family</li>
+                <li class="paldea" data-member="476">Fidough family</li>
+                <li class="paldea" data-member="477">Smoliv family</li>
+                <li class="paldea" data-member="478">Squawkabilly</li>
+                <li class="paldea" data-member="479">Nacli family</li>
+                <li class="paldea" data-member="480">Charcadet family</li>
+                <li class="paldea" data-member="481">Tadbulb family</li>
+                <li class="paldea" data-member="482">Wattrel family</li>
+                <li class="paldea" data-member="483">Maschiff family</li>
+                <li class="paldea" data-member="484">Shroodle family</li>
+                <li class="paldea" data-member="485">Bramblin family</li>
+                <li class="paldea" data-member="486">Toedscool family</li>
+                <li class="paldea" data-member="487">Klawf</li>
+                <li class="paldea" data-member="488">Capasakid family</li>
+                <li class="paldea" data-member="489">Rellor family</li>
+                <li class="paldea" data-member="490">Flittle family</li>
+                <li class="paldea" data-member="491">Tinkatink family</li>
+                <li class="paldea" data-member="492">Wiglett family</li>
+                <li class="paldea" data-member="493">Bombirdier</li>
+                <li class="paldea" data-member="494">Finizen family</li>
+                <li class="paldea" data-member="495">Varoom family</li>
+                <li class="paldea" data-member="496">Cyclizar</li>
+                <li class="paldea" data-member="497">Orthworm</li>
+                <li class="paldea" data-member="498">Glimmet family</li>
+                <li class="paldea" data-member="499">Greavard family</li>
+                <li class="paldea" data-member="500">Flamigo</li>
+                <li class="paldea" data-member="501">Cetoddle family</li>
+                <li class="paldea" data-member="502">Veluza</li>
+                <li class="paldea" data-member="503">Dondozo</li>
+                <li class="paldea" data-member="504">Tatsugiri</li>
+                <li class="paldea" data-member="505">Great Tusk</li>
+                <li class="paldea" data-member="506">Scream Tail</li>
+                <li class="paldea" data-member="507">Brute Bonnet</li>
+                <li class="paldea" data-member="508">Flutter Mane</li>
+                <li class="paldea" data-member="509">Slither Wing</li>
+                <li class="paldea" data-member="510">Sandy Shocks</li>
+                <li class="paldea" data-member="511">Iron Treads</li>
+                <li class="paldea" data-member="512">Iron Bundle</li>
+                <li class="paldea" data-member="513">Iron Hands</li>
+                <li class="paldea" data-member="514">Iron Jugulis</li>
+                <li class="paldea" data-member="515">Iron Moth</li>
+                <li class="paldea" data-member="516">Iron Thorns</li>
+                <li class="paldea" data-member="517">Frigibax family</li>
+                <li class="paldea" data-member="518">Gimmighoul family</li>
+                <li class="paldea" data-member="519">Wo-Chien</li>
+                <li class="paldea" data-member="520">Chien-Pao</li>
+                <li class="paldea" data-member="521">Ting-Lu</li>
+                <li class="paldea" data-member="522">Chi-Yu</li>
+                <li class="paldea" data-member="523">Roaring Moon</li>
+                <li class="paldea" data-member="524">Iron Valiant</li>
+                <li class="paldea" data-member="525">Koraidon</li>
+                <li class="paldea" data-member="526">Miraidon</li>
+                <li class="paldea" data-member="527">Walking Wake</li>
+                <li class="paldea" data-member="528">Iron Leaves</li>
+                <li class="paldea" data-member="529">Poltchageist</li>
+                <li class="paldea" data-member="530">Raging Bolt</li>
+                <li class="paldea" data-member="531">Iron Crown</li>
+                <li class="paldea" data-member="532">Okidogi</li>
+                <li class="paldea" data-member="533">Munkidori</li>
+                <li class="paldea" data-member="534">Fezandipiti</li>
+                <li class="paldea" data-member="535">Ogrepon</li>
+                <li class="paldea" data-member="536">Terapagos</li>
+            </ul>
+        </section>
+
+        <section id="bottom" class="grid-con">
+            <h2 class="hidden">Copyright Information</h2>
+            <p class="col-span-full">All images used are used for a transformative work and nonprofit. The images are copyrighted or is a registered trademark. The contributor claims fair use. No copyright infringement is intended.</p>
+    
+            <p class="col-span-full">Certain materials are included under fair use exemption of the U.S. Copyright Law and are restricted from further use.</p>
+    
+            <p class="col-span-full">© 2023 Pokémon. © 1995–2023 Nintendo/Creatures Inc./GAME FREAK inc.</p>
+        </section>
+    </div>
+</body>
+</html>
